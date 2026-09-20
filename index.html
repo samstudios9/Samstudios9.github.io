@@ -19,9 +19,26 @@ a{text-decoration:none;color:inherit}
 .container{width:min(92%,var(--max));margin:auto}
 header{position:sticky;top:0;z-index:50;background:rgba(8,9,12,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
 .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;font-size:1.35rem;letter-spacing:-.04em}.logo span{color:var(--accent)}
-nav{display:flex;gap:25px;align-items:center}nav a{color:#d9dce4;font-size:.94rem}nav a:hover{color:#fff}
-.menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 900;
+    font-size: 1.35rem;
+    letter-spacing: -.04em;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logo span {
+    color: var(--accent);
+}
+.me.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:12px;font-weight:800;border:1px solid var(--border);transition:.2s}nu{display:none;background:none;border:0;color:white;font-size:1.5rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:12px;font-weight:800;border:1px solid var(--border);transition:.2s}
 .btn-primary{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 10px 35px rgba(255,48,79,.2)}
 .btn-primary:hover{transform:translateY(-2px);background:#ff1f41}
@@ -83,7 +100,7 @@ footer{padding:35px 0;border-top:1px solid var(--border);color:var(--muted);font
 <header>
   <div class="container nav">
     <a class="logo" href="#home">
-    <img src="logo.png" alt="SamStudios9 Logo">
+    <img src="LOGO.png" alt="SamStudios9 Logo">
     <span>SamStudios9</span>
 </a>
     <nav>
