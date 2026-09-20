@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SamStudios9 — official creator website. Watch the latest videos, explore popular content, and connect with SamStudios9.">
+<title>SamStudios9 | Official Website</title>
+<style>
+:root{
+  --bg:#08090c; --surface:#101218; --surface2:#171922; --text:#f5f7fb;
+  --muted:#a8adba; --accent:#ff304f; --accent2:#ff6b7d; --border:rgba(255,255,255,.09);
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+radial-gradient(circle at 80% 5%,rgba(255,48,79,.14),transparent 30%),var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(92%,var(--max));margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(8,9,12,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:1.35rem;letter-spacing:-.04em}.logo span{color:var(--accent)}
+nav{display:flex;gap:25px;align-items:center}nav a{color:#d9dce4;font-size:.94rem}nav a:hover{color:#fff}
+.menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:12px;font-weight:800;border:1px solid var(--border);transition:.2s}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 10px 35px rgba(255,48,79,.2)}
+.btn-primary:hover{transform:translateY(-2px);background:#ff1f41}
+.btn-ghost{background:rgba(255,255,255,.04)}.btn-ghost:hover{background:rgba(255,255,255,.09)}
+.hero{min-height:680px;display:grid;place-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,var(--bg)),linear-gradient(90deg,rgba(8,9,12,.96),rgba(8,9,12,.55),rgba(8,9,12,.9))}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding:90px 0}
+.kicker{color:#ff8494;font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;margin-bottom:17px}
+h1{font-size:clamp(3.1rem,8vw,6.6rem);line-height:.92;letter-spacing:-.075em;margin-bottom:24px}
+h1 span{color:var(--accent)}
+.hero p{font-size:1.12rem;color:var(--muted);max-width:620px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--border);border-radius:28px;padding:32px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.play{height:180px;border-radius:20px;background:linear-gradient(135deg,#1a1d28,#090a0e);display:grid;place-items:center;border:1px solid var(--border);margin-bottom:20px}
+.play span{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:var(--accent);font-size:1.7rem;padding-left:4px;box-shadow:0 15px 45px rgba(255,48,79,.3)}
+.card-title{font-size:1.3rem;font-weight:800}.muted{color:var(--muted)}
+section{padding:95px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:34px}
+.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.75rem}
+h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.05em;line-height:1.05;margin-top:7px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.video{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s}
+.video:hover{transform:translateY(-5px);border-color:rgba(255,48,79,.45)}
+.thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#1b1e29,#0c0d11);display:grid;place-items:center;position:relative}
+.thumb .play-mini{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:rgba(255,48,79,.95)}
+.video-body{padding:18px}.video h3{font-size:1rem;line-height:1.35;margin-bottom:6px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.about-box{background:linear-gradient(145deg,#141720,#0c0d11);border:1px solid var(--border);padding:38px;border-radius:24px}
+.about-box strong{font-size:3rem;display:block;line-height:1;margin-bottom:8px}.about p{color:var(--muted);margin-top:16px}
+.contact{background:linear-gradient(135deg,rgba(255,48,79,.13),rgba(255,255,255,.03));border:1px solid var(--border);border-radius:28px;padding:55px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+.socials{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.social{padding:11px 15px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:10px;color:#ddd}
+footer{padding:35px 0;border-top:1px solid var(--border);color:var(--muted);font-size:.9rem}
+@media(max-width:800px){
+ nav{display:none}.menu{display:block}.hero{min-height:auto}.hero-grid,.about,.contact{grid-template-columns:1fr}
+ .hero-grid{padding:75px 0}.grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}
+ .hero-card{display:none}.contact{padding:32px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">Sam<span>Studios9</span></a>
+    <nav>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#latest">Latest</a><a href="#popular">Popular</a><a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://youtube.com/@samstudios9" target="_blank" rel="noopener">Subscribe</a>
+    </nav>
+    <button class="menu" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Official creator website</div>
+      <h1>Welcome to<br><span>SamStudios9.</span></h1>
+      <p>Discover the latest videos, popular uploads and everything happening across the SamStudios9 channel.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://youtube.com/@samstudios9" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+        <a class="btn btn-ghost" href="#latest">Explore Videos</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="play"><span>▶</span></div>
+      <div class="card-title">SamStudios9</div>
+      <div class="muted">New videos. New stories. Stay tuned.</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div>
+      <div class="eyebrow">About the channel</div>
+      <h2>A place for the SamStudios9 community.</h2>
+      <p class="muted" style="margin-top:20px">This is the official online home for SamStudios9 — built to make it easy for viewers to discover the channel, watch videos and stay connected.</p>
+      <div class="actions" style="margin-top:25px"><a class="btn btn-primary" href="https://youtube.com/@samstudios9" target="_blank" rel="noopener">Visit Channel</a></div>
+    </div>
+    <div class="about-box"><strong>9</strong><span class="muted">SamStudios9 — your destination for the latest channel content.</span></div>
+  </div>
+</section>
+
+<section id="latest">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Watch now</div><h2>Latest Videos</h2></div><a class="btn btn-ghost" href="https://youtube.com/@samstudios9/videos" target="_blank" rel="noopener">See all videos ↗</a></div>
+    <div class="grid">
+      <a class="video" href="https://youtube.com/@samstudios9/videos" target="_blank" rel="noopener"><div class="thumb"><div class="play-mini">▶</div></div><div class="video-body"><h3>Latest SamStudios9 upload</h3><p class="muted">Watch the newest video on YouTube.</p></div></a>
+      <a class="video" href="https://youtube.com/@samstudios9/videos" target="_blank" rel="noopener"><div class="thumb"><div class="play-mini">▶</div></div><div class="video-body"><h3>More from SamStudios9</h3><p class="muted">Explore recent uploads and Shorts.</p></div></a>
+      <a class="video" href="https://youtube.com/@samstudios9/videos" target="_blank" rel="noopener"><div class="thumb"><div class="play-mini">▶</div></div><div class="video-body"><h3>Watch on YouTube</h3><p class="muted">Head to the channel for the newest content.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="popular">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Fan favourites</div><h2>Popular Videos</h2></div><a class="btn btn-ghost" href="https://youtube.com/@samstudios9/videos?view=0&sort=p&flow=grid" target="_blank" rel="noopener">View popular ↗</a></div>
+    <div class="grid">
+      <a class="video" href="https://youtube.com/@samstudios9/videos?view=0&sort=p&flow=grid" target="_blank" rel="noopener"><div class="thumb"><div class="play-mini">▶</div></div><div class="video-body"><h3>Popular on SamStudios9</h3><p class="muted">Discover the channel's top content.</p></div></a>
+      <a class="video" href="https://youtube.com/@samstudios9/videos?view=0&sort=p&flow=grid" target="_blank" rel="noopener"><div class="thumb"><div class="play-mini">▶</div></div><div class="video-body"><h3>Top videos</h3><p class="muted">See what viewers are watching most.</p></div></a>
+      <a class="video" href="https://youtube.com/@samstudios9/videos?view=0&sort=p&flow=grid" target="_blank" rel="noopener"><div class="thumb"><div class="play-mini">▶</div></div><div class="video-body"><h3>Community favourites</h3><p class="muted">Jump into the most-watched uploads.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact">
+    <div><div class="eyebrow">Stay connected</div><h2>Let’s connect.</h2><p class="muted" style="margin-top:16px">For collaborations, business enquiries or general messages, connect through your social channels or YouTube.</p></div>
+    <div>
+      <a class="btn btn-primary" href="https://youtube.com/@samstudios9" target="_blank" rel="noopener">Subscribe to SamStudios9</a><div class="muted" style="margin-top:14px">Contact: <a href="tel:+919347177589" style="color:#fff;font-weight:800">9347177589</a></div>
+      <div class="socials">
+        <a class="social" href="https://youtube.com/@samstudios9" target="_blank" rel="noopener">YouTube</a>
+        <a class="social" href="https://www.instagram.com/sam.studios9" target="_blank" rel="noopener">Instagram</a>
+        <a class="social" href="https://www.facebook.com/share/1HS75YKKRL/" target="_blank" rel="noopener">Facebook</a>
+        <a class="social" href="tel:+919347177589">Call 9347177589</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 SamStudios9. All rights reserved.</div></footer>
+</body>
+</html>
